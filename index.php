@@ -17,11 +17,13 @@
 <body <?php body_class()?>>
     <div class="header-area">
         <div class="container">
-            <div class="row d-flex justify-content-between">
+            <div class="row d-flex justify-content-between <?php echo get_theme_mod("mt_menu_position");?>">
                 <div class="col-md-1">
                     <a href="#"><img src="<?php echo get_theme_mod("mt_logo");?>" alt=""></a>
                 </div>
-                <div class="col-md-9"></div>
+                <div class="col-md-8">
+                    <?php wp_nav_menu(array("theme_location" => "main_menu", "menu_id" => "nav"))?>
+                </div>
             </div>
         </div>
     </div>

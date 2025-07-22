@@ -1,6 +1,9 @@
 img {
   width: 100%;
 }
+body {
+  font-family: "Oswald", sans-serif;
+}
 
 /*======================
     Header section
@@ -8,4 +11,104 @@ img {
 
 .header-area {
   margin-top: 12px;
+}
+
+/*======================
+    Navbar section
+========================*/
+
+/* Reset default list styles */
+#nav,
+#nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Top level nav */
+#nav {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: center;
+}
+
+#nav > li {
+  position: relative;
+}
+
+#nav > li > a {
+  font-family: "Oswald", sans-serif;
+  color: #34495e;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#nav > li:hover > a {
+  background: #34495e;
+  color: white;
+}
+
+/* Dropdown Level 1 */
+#nav li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #34495e;
+  display: none;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+#nav li:hover > ul {
+  display: block;
+}
+
+#nav li ul li a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+#nav li ul li a:hover {
+  background: #3d566e;
+}
+
+/* Dropdown Level 2 (Sub-dropdown) */
+#nav li ul li {
+  position: relative;
+}
+
+#nav li ul li ul {
+  top: 0;
+  left: 100%;
+  display: none;
+  background: #3d566e;
+  border-radius: 5px;
+}
+
+#nav li ul li:hover > ul {
+  display: block;
+}
+
+/*========================
+Menu Position Control 
+==========================*/
+.left_menu {
+  flex-direction: row-reverse;
+}
+.right_menu {
+  flex-direction: row;
+}
+.center_menu {
+  flex-direction: column;
+  align-items: center;
 }
