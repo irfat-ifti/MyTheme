@@ -1,8 +1,7 @@
 <?php 
 
-/*
-My theme functions
-*/
+// !My theme functions
+
 
 // Default functions
 include_once("inc/default.php");

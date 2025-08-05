@@ -14,6 +14,20 @@ body {
 }
 
 /*======================
+    Index page style
+========================*/
+.post-thumb {
+  overflow: hidden;
+}
+.post-thumb img {
+  transition: transform 0.4s ease;
+}
+.post-thumb:hover img {
+  transform: scale(1.04);
+  transition: transform 0.4s ease;
+}
+
+/*======================
     Navbar section
 ========================*/
 
