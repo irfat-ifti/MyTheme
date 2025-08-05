@@ -73,9 +73,26 @@ function mt_customizer_register($wp_customize){
         "choices"=> array(
             "left_menu" => "Left Menu",
             "right_menu" => "Right Menu",
-            "center_menu" => "Center Menu",
-        ),
+            "center_menu" => "Center Menu"
+        )
+    ));
 
+    //====================
+    // Footer area
+    //====================
+    $wp_customize->add_section("mt_footer_area", array(
+        "title" => __("Customize Footer", "irfatifti"),
+        "description" => "Customize your footer area from here."
+    ));
+    $wp_customize->add_setting("mt_footer_customize", array(
+        "default" => __("Designed & Developed by [Your Name or Company]","irfatifti"),
+    ));
+    $wp_customize->add_control("mt_footer_control", array(
+        "label" => "Footer",
+        "description" => "Customize your Footer",
+        "section"=> "mt_footer_area",
+        "settings"=> "mt_footer_customize",
+        "type"=> "text",
     ));
 
 }
