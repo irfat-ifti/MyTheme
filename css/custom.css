@@ -10,7 +10,8 @@ body {
 ========================*/
 
 .header-area {
-  margin-top: 12px;
+  padding-top: 12px;
+  background-color: black;
 }
 
 /*======================
@@ -52,21 +53,22 @@ body {
 
 #nav > li > a {
   font-family: "Oswald", sans-serif;
-  color: #34495e;
+  color: #b6c5c9;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 5px 15px;
   display: block;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   font-weight: 600;
-  border-radius: 5px;
   font-size: 18px;
   text-transform: uppercase;
 }
 
-#nav > li:hover > a {
-  background: #34495e;
-  color: white;
+.current_page_item {
+  border-bottom: 3px solid #ffc107;
 }
+/* .current_page_item {
+  border-bottom: 3px solid #ffc107;
+} */
 
 /* Dropdown Level 1 */
 #nav li ul {
@@ -74,7 +76,7 @@ body {
   top: 100%;
   left: 0;
   min-width: 200px;
-  background: #34495e;
+  background: black;
   display: none;
   z-index: 1000;
   border-radius: 5px;
@@ -93,7 +95,7 @@ body {
 }
 
 #nav li ul li a:hover {
-  background: #3d566e;
+  background: black;
 }
 
 /* Dropdown Level 2 (Sub-dropdown) */
@@ -105,7 +107,7 @@ body {
   top: 0;
   left: 100%;
   display: none;
-  background: #3d566e;
+  background: black;
   border-radius: 5px;
 }
 
@@ -126,6 +128,59 @@ Menu Position Control
   flex-direction: column;
   align-items: center;
 }
+/*========================
+Footer Section
+==========================*/
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+#footer .footer-1 h2,
+#footer .footer-2 h2,
+#footer .footer-3 h2 {
+  margin-bottom: 30px;
+  border-left: 10px solid #ffc107;
+  padding-left: 15px;
+  color: #ffc107;
+}
+#footer .footer-1 p {
+  line-height: 30px;
+  color: #a9b1b3;
+}
+.footer-inner-container {
+  width: 30%;
+}
+#footer .footer-2 ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+#footer .footer-2 ul ul {
+  display: none;
+}
+#footer .footer-2 ul a {
+  color: #a9b1b3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#footer .footer-2 ul a:hover {
+  color: #ffc107;
+}
+.footer-bg {
+  background-color: #000000 !important;
+}
+/*========================
+Blog section
+==========================*/
+
+.blog-area {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 20px;
+}
 
 /*========================
 Pagination
@@ -145,4 +200,44 @@ Pagination
 }
 .current {
   background-color: #ffc107;
+}
+
+/*========================
+Sidebar section
+==========================*/
+.child-sidebar form .wp-block-search__inside-wrapper button[type="submit"] {
+  background-color: #dc3545;
+  color: white;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin: 0;
+  border: none;
+}
+.child-sidebar form .wp-block-search__inside-wrapper input {
+  border: 1px solid #dc3545;
+  border-right: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  outline: none;
+  color: #dc3545;
+}
+.child-sidebar h2 {
+  margin-top: 20px;
+  margin-bottom: 14px;
+  color: #dc3545;
+  border-left: 10px solid #dc3545;
+  padding-left: 15px;
+}
+.child-sidebar ul li a {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 20px;
+}
+.child-sidebar ul li a:hover,
+.child-sidebar .wp-block-tag-cloud a:hover {
+  color: #dc3545;
+}
+.child-sidebar .wp-block-tag-cloud a {
+  text-decoration: none;
+  color: #6c757d;
 }

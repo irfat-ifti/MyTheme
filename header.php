@@ -15,7 +15,7 @@
 </head>
 
 <body <?php body_class()?>>
-    <header class="header-area">
+    <header id="header" class="header-area">
         <div class="container">
             <div class="row d-flex justify-content-between <?php echo get_theme_mod("mt_menu_position");?>">
                 <div class="col-md-1">

@@ -2,7 +2,7 @@
 <section id="body_are">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-9 pl-2">
                 <?php if(have_posts()): while(have_posts()): the_post();?>
                 <div class="blog-area my-5">
                     <h2><a class="text-decoration-none text-dark"
@@ -28,8 +28,8 @@
                     ?>
                 </div>
             </div>
-            <div class="col-md-3">
-                <h2>This is sidebar area</h2>
+            <div class="col-md-3 pr-2 mt-5">
+                <?php get_sidebar();?>
             </div>
         </div>
     </div>
