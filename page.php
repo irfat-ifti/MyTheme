@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 pl-2">
-                <?php get_template_part('templates/blog-setup');?>
+                <?php get_template_part('templates/post-setup');?>
             </div>
             <div class="col-md-3 pr-2 mt-5">
                 <?php get_sidebar();?>
