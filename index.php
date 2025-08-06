@@ -17,6 +17,16 @@
                     </div>
                 </div>
                 <?php endwhile; else: _e("No Posts Found", "irfatifti"); endif;?>
+                <div id="page_nav">
+                    <?php 
+                    if(function_exists("mt_pagenav")) {
+                        mt_pagenav();
+                    }else{
+                        next_posts_link();
+                        previous_posts_link();
+                    }
+                    ?>
+                </div>
             </div>
             <div class="col-md-3">
                 <h2>This is sidebar area</h2>
