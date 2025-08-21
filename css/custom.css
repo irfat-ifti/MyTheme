@@ -1,8 +1,20 @@
+:root {
+  --primary: #dc3545;
+  --secondary: #ffc107;
+}
+
 img {
   width: 100%;
 }
 body {
   font-family: "Oswald", sans-serif;
+}
+.btn-danger {
+  background-color: var(--primary) !important;
+  border-color: var(--primary);
+}
+.text-warning {
+  color: var(--secondary) !important;
 }
 
 /*======================
@@ -64,10 +76,10 @@ body {
 }
 
 .current_page_item {
-  border-bottom: 3px solid #ffc107;
+  border-bottom: 3px solid var(--secondary);
 }
 /* .current_page_item {
-  border-bottom: 3px solid #ffc107;
+  border-bottom: 3px solid var(--secondary);
 } */
 
 /* Dropdown Level 1 */
@@ -139,9 +151,9 @@ Footer Section
 #footer .footer-2 h2,
 #footer .footer-3 h2 {
   margin-bottom: 30px;
-  border-left: 10px solid #ffc107;
+  border-left: 10px solid var(--secondary);
   padding-left: 15px;
-  color: #ffc107;
+  color: var(--secondary);
 }
 #footer .footer-1 p {
   line-height: 30px;
@@ -168,7 +180,7 @@ Footer Section
   text-transform: uppercase;
 }
 #footer .footer-2 ul a:hover {
-  color: #ffc107;
+  color: var(--secondary);
 }
 .footer-bg {
   background-color: #000000 !important;
@@ -188,7 +200,7 @@ Pagination
 .page-numbers {
   display: inline-flex;
   text-align: center;
-  background-color: #dc3545;
+  background-color: var(--primary);
   color: white;
   width: 40px;
   height: 40px;
@@ -199,14 +211,14 @@ Pagination
   margin-right: 7px;
 }
 .current {
-  background-color: #ffc107;
+  background-color: var(--secondary);
 }
 
 /*========================
 Sidebar section
 ==========================*/
 .child-sidebar form .wp-block-search__inside-wrapper button[type="submit"] {
-  background-color: #dc3545;
+  background-color: var(--primary);
   color: white;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -214,18 +226,18 @@ Sidebar section
   border: none;
 }
 .child-sidebar form .wp-block-search__inside-wrapper input {
-  border: 1px solid #dc3545;
+  border: 1px solid var(--primary);
   border-right: none;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   outline: none;
-  color: #dc3545;
+  color: var(--primary);
 }
 .child-sidebar h2 {
   margin-top: 20px;
   margin-bottom: 14px;
-  color: #dc3545;
-  border-left: 10px solid #dc3545;
+  color: var(--primary);
+  border-left: 10px solid var(--primary);
   padding-left: 15px;
 }
 .child-sidebar ul li a {
@@ -235,9 +247,91 @@ Sidebar section
 }
 .child-sidebar ul li a:hover,
 .child-sidebar .wp-block-tag-cloud a:hover {
-  color: #dc3545;
+  color: var(--primary);
 }
 .child-sidebar .wp-block-tag-cloud a {
   text-decoration: none;
   color: #6c757d;
+}
+
+/*========================
+Comments section
+==========================*/
+#comments-section {
+  border: 2px solid var(--primary);
+  padding: 20px;
+  background-color: black;
+  margin-bottom: 20px;
+}
+#comments-section #comments,
+#comments-section .comment-respond .comment-reply-title {
+  color: var(--primary);
+  border-left: 10px solid var(--primary);
+  padding-left: 15px;
+}
+#comments-section .comment-respond .comment-reply-title {
+  margin-top: 70px;
+}
+#comments-section .comment-body .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--primary);
+}
+#comments-section a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+#comments-section .commentlist .comment-body {
+  margin-bottom: 20px;
+}
+#comments-section .commentlist .comment-body p {
+  font-size: 20px;
+  color: #5bc0eb;
+}
+#comments-section .commentlist .comment-body .reply a {
+  color: white;
+}
+#comments-section .commentlist .comment-body .reply,
+#comments-section .form-submit input[type="submit"] {
+  background-color: var(--primary);
+  padding: 5px 12px;
+  display: inline-block;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+}
+#comments-section .logged-in-as {
+  color: var(--secondary);
+}
+#comments-section .comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+#comments-section .comment-form-comment label {
+  color: var(--primary);
+}
+#comments-section .comment-form-comment textarea {
+  border-color: var(--primary);
+  outline: none;
+  color: white;
+  padding: 5px;
+  background-color: black;
+}
+#comments-section .nocomments {
+  color: var(--secondary);
+  margin: 0;
+}
+/*========================
+Archive section styling
+==========================*/
+#archive-heading,
+#search-heading {
+  background-color: #000000;
+  padding: 20px;
+  color: var(--secondary);
+}
+.author-desc {
+  color: var(--secondary);
 }
