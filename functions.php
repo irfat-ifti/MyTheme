@@ -17,3 +17,9 @@ include_once("inc/menu-register.php");
 
 //Register Widgets
 include_once("inc/widgets-register.php");
+
+//Register Custom Post
+include_once("inc/custom_post.php");
+
+//Shortcode
+include_once("inc/shortcode.php");

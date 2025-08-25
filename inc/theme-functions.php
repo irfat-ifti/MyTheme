@@ -70,6 +70,14 @@ function mt_customizer_register($wp_customize){
         "description" => "Customize Theme colors from here."
 
     ));
+    $wp_customize->add_setting("mt_body_color", array(
+        "default" => "#ffffff",
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, "mt_body_color", array(
+        "label" => "Body color",
+        "section" => "mt_theme_color_area",
+        "settings" => "mt_body_color",
+    )));
     $wp_customize->add_setting("mt_primary_color", array(
         "default" => "#ff6b6b",
     ));
@@ -98,6 +106,8 @@ function apply_user_colors_to_theme() {
     --primary: <?php echo get_theme_mod("mt_primary_color");
     ?>;
     --secondary: <?php echo get_theme_mod("mt_secondary_color");
+    ?>;
+    --body: <?php echo get_theme_mod("mt_body_color");
     ?>;
 }
 </style>
